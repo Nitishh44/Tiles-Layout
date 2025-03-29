@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style> 
+        body { background-color: aquamarine; margin: 0;  font-family: Arial, sans-serif;} 
+        header{background: wheat; color: black; text-align: center; padding: 20px;}
+        footer {background: wheat; color: black; text-align: center; padding: 15px; margin-top: 20px;}
+        .container {
+    display: flex;  /* Enables flexbox */
+    flex-wrap: wrap;  /* Allows tiles to move to the next line if needed */
+    justify-content: center;  /* Centers tiles horizontally */
+    gap: 15px;  /* Adds space between tiles */
+    padding: 20px;  /* Adds space around the container */
+}
+.tile {
+    width: 150px;
+    min-height: 150px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; 
+}
+
+/* Add hover effect */
+.tile:hover {
+    transform: scale(1.05);  /* Slightly enlarges on hover */
+    background: lightgray;  /* Changes color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.tile h2 {
+        font-size: 16px;
+        margin: 0;
+    }
+    .tile p {
+        font-size: 12px;
+        margin: 5px 0 0;
+        font-weight: normal;
+        text-align: center;
+    }
+    @media (max-width: 600px) {
+            .tile {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header> Tiles Layout </header>
+    <div class = "container"> 
+        <div class="tile">
+            <h2> Title 1</h2>
+            <p>GeeksforGeeks is a leading platform that provides computer science resources and coding challenges for programmers and technology enthusiasts</p>
+            </div>  <br>
+        <div class="tile">
+            <h2> Title 2</h2>
+            <p>GeeksforGeeks is a leading platform that provides computer science resources and coding challenges for programmers and technology enthusiasts</p>
+        </div> <br>
+        <div class="tile">
+            <h2> Title 3</h2>
+            <p>GeeksforGeeks is a leading platform that provides computer science resources and coding challenges for programmers and technology enthusiasts</p>
+            </div> <br>
+        <div class="tile">
+            <h2>Title 4</h2>
+            <p>GeeksforGeeks is a leading platform that provides computer science resources and coding challenges for programmers and technology enthusiasts</p>
+        </div>
+        
+    </div>
+    <footer> 
+        © 2024 Tiles Layout <br>
+        Designed by Nitish
+    </footer>
+    
+</body>
+</html>
